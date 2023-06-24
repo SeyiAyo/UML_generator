@@ -1,0 +1,31 @@
+
+    @startuml
+    
+    class Car {
+        - carModel: string
+        - engineType: Engine
+        - batteryType: Battery
+        - serviceCriteria: ServiceCriteria
+    }
+    
+    class Engine {
+        - engineType: string
+        - serviceCriteria: ServiceCriteria
+    }
+    
+    class Battery {
+        - batteryType: string
+        - serviceCriteria: ServiceCriteria
+    }
+    
+    class ServiceCriteria {
+        - criteriaDescription: string
+    }
+    
+    Car "1" --> "1" Engine
+    Car "1" --> "1" Battery
+    Engine "1" --> "1" ServiceCriteria
+    Battery "1" --> "1" ServiceCriteria
+    
+    @enduml
+    
